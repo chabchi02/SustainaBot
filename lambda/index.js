@@ -14,7 +14,7 @@ const firebase = require('firebase/app');
 require('firebase/database')
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBSWeWvcwXu-Egde8KIB3dwxAV9zhX0mHM",
+  apiKey: "",
   authDomain: "sustainabot-ebe16.firebaseapp.com",
   databaseURL: "https://sustainabot-ebe16-default-rtdb.firebaseio.com",
   projectId: "sustainabot-ebe16",
