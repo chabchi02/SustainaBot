@@ -1,0 +1,281 @@
+{
+  "interactionModel": {
+    "dialog": {
+      "intents": [
+        {
+          "slots": [
+            {
+              "name": "category",
+              "elicitationRequired": true,
+              "validations": [
+                {
+                  "values": [
+                    "Energy Saving",
+                    "Eco-Friendly Transportation",
+                    "Waste Reduction",
+                    "Sustainable Eating",
+                    "Water Conservation",
+                    "Sustainable Shopping"
+                  ],
+                  "type": "isInSet",
+                  "prompt": "Slot.Validation.232351773454.1374990959298.1327433722187"
+                }
+              ],
+              "type": "AMAZON.Actor",
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.232351773454.1374990959298"
+              }
+            }
+          ],
+          "name": "HelpIntent",
+          "confirmationRequired": false,
+          "prompts": {}
+        },
+        {
+          "slots": [
+            {
+              "name": "number",
+              "elicitationRequired": true,
+              "type": "AMAZON.NUMBER",
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.940363843139.1325592330259"
+              }
+            },
+            {
+              "name": "day",
+              "elicitationRequired": false,
+              "type": "AMAZON.DayOfWeek",
+              "confirmationRequired": false,
+              "prompts": {}
+            }
+          ],
+          "name": "IncreaseGarbageBagsIntent",
+          "confirmationRequired": false,
+          "prompts": {}
+        },
+        {
+          "slots": [
+            {
+              "name": "number",
+              "elicitationRequired": true,
+              "type": "AMAZON.NUMBER",
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.445188290010.1012374584862"
+              }
+            }
+          ],
+          "name": "fillWaterBottleIntent",
+          "confirmationRequired": false,
+          "prompts": {}
+        }
+      ],
+      "delegationStrategy": "ALWAYS"
+    },
+    "languageModel": {
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": [
+            "How does this work",
+            "How do I get started",
+            "Help"
+          ]
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "slots": [],
+          "name": "HelloWorldIntent",
+          "samples": [
+            "hello",
+            "how are you",
+            "say hi world",
+            "say hi",
+            "hi",
+            "say hello world",
+            "say hello"
+          ]
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.FallbackIntent",
+          "samples": []
+        },
+        {
+          "slots": [
+            {
+              "multipleValues": {
+                "enabled": true
+              },
+              "name": "category",
+              "type": "AMAZON.Actor"
+            }
+          ],
+          "name": "HelpIntent",
+          "samples": [
+            "can i get a {category} recommendation",
+            "can i get a {category} tip",
+            "how about {category}",
+            "Give me some tips for {category}",
+            "I need help with {category}"
+          ]
+        },
+        {
+          "slots": [
+            {
+              "multipleValues": {
+                "enabled": true
+              },
+              "name": "number",
+              "type": "AMAZON.NUMBER",
+              "samples": [
+                "I took out {number} bags",
+                "{number}"
+              ]
+            },
+            {
+              "multipleValues": {
+                "enabled": true
+              },
+              "name": "day",
+              "type": "AMAZON.DayOfWeek"
+            }
+          ],
+          "name": "IncreaseGarbageBagsIntent",
+          "samples": [
+            "i took out garbage {day}",
+            "I took out {number} bags {day}",
+            "I took out {number} bag {day}",
+            "I took out {number} bags",
+            "I took out {number} bags today",
+            "Increment the number of bags I took out today by {number}",
+            "I took out {number} bag today",
+            "Increase number of bags by {number}"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "NumGarbageBagsIntent",
+          "samples": [
+            "how many bags",
+            "how many garbage bags",
+            "How many bags have I taken out",
+            "How many bags have I used",
+            "how many garbage bags have i taken out",
+            "how many garbage bags have i used"
+          ]
+        },
+        {
+          "slots": [
+            {
+              "multipleValues": {
+                "enabled": true
+              },
+              "name": "day",
+              "type": "AMAZON.DayOfWeek"
+            }
+          ],
+          "name": "IncreaseTipsIntent",
+          "samples": [
+            "thanks i\u0027m going to use that",
+            "i took one of your tips",
+            "i took a tip today",
+            "i use a sustainability tip",
+            "i was sustainable",
+            "i listened to your advice {day}",
+            "I was sustainable today",
+            "I used a tip today",
+            "I used one of your tips"
+          ]
+        },
+        {
+          "slots": [
+            {
+              "multipleValues": {
+                "enabled": true
+              },
+              "name": "number",
+              "type": "AMAZON.NUMBER",
+              "samples": [
+                "I filled {number}  bottle",
+                "I filled {number} water bottle",
+                "I filled {number} water bottles",
+                "{number}",
+                "I filled {number} bottles"
+              ]
+            }
+          ],
+          "name": "fillWaterBottleIntent",
+          "samples": [
+            "i filled {number} bottle",
+            "i filled {number} water bottle",
+            "i filled {number} water bottles",
+            "i filled a water bottle",
+            "i filled a bottle",
+            "i filled {number} bottles"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "NumWaterBottleIntent",
+          "samples": [
+            "how many bottles have I filled",
+            "how many water bottles have i filled"
+          ]
+        }
+      ],
+      "types": [],
+      "invocationName": "sustaina bot"
+    },
+    "prompts": [
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "I\u0027m sorry, I can\u0027t help you there. Please specify one of the categories I am able to help you with."
+          }
+        ],
+        "id": "Slot.Validation.232351773454.1374990959298.1327433722187"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Specify a sustainability category"
+          }
+        ],
+        "id": "Elicit.Slot.232351773454.1374990959298"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "How many bags did you use?"
+          }
+        ],
+        "id": "Elicit.Slot.940363843139.1325592330259"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "How many bottles did you fill?"
+          }
+        ],
+        "id": "Elicit.Slot.445188290010.1012374584862"
+      }
+    ]
+  }
+}
